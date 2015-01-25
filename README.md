@@ -1,6 +1,10 @@
 #website in webview
 
-website in webview is an Android project that load website in a full screen webview. it helps you convert you responsive website, into a simple Android application.
+website in webview is an Android project that load website in a full screen webview with loading. it helps you convert you responsive website, into a simple Android application.
+
+#Screenshot
+
+![Preview](https://dl.dropboxusercontent.com/u/34047574/webviewapp.jpg)
 
 #Quick Start
 
@@ -22,7 +26,7 @@ Boolean showProgressOnSplashScreen = true;
 
 **Step 5 - follow these steps on [Tuts+](http://bit.ly/1Eluwdn) to make your application ready to publish**
 
-**Step 6 - add star to this project and if you are a Android developer, help me by fork this project and develop it**
+**Step 6 - add star to this project and if you are an Android developer, help me by fork this project and send pull request**
 
 License
 -------
