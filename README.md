@@ -1,10 +1,10 @@
-#website-in-webview
+#website in webview
 
 website in webview is an Android project that load website in a full screen webview. it helps you convert you responsive website, into a simple Android application.
 
 #Quick Start
 
-**Step 1 - import project into eclipse form Import>Existing Android code into workspace **
+**Step 1 - import project into eclipse form Import>Existing Android code into workspace**
 
 **Step 2 - Make the following changes in MainAcivity.java**
 ```java
@@ -16,9 +16,9 @@ Boolean showProgressOnSplashScreen = true;
 
 ```
 
-**Step 3 - change splash screen loading picture, in res/drawble-hdpi/splash.jpg **
+**Step 3 - change splash screen loading picture, in res/drawble-hdpi/splash.jpg**
 
-**Step 4 - change icon's, all ic_launcher in res/drawble* folder or follow [Change App Icon in Eclipse IDE with Android SDK](http://stackoverflow.com/questions/11737932/change-app-icon-in-eclipse-ide-with-android-sdk) **
+**Step 4 - change icon's, all ic_launcher in res/drawble folder or follow [Change App Icon in Eclipse IDE with Android SDK](http://stackoverflow.com/questions/11737932/change-app-icon-in-eclipse-ide-with-android-sdk)**
 
 **Step 5 - follow these steps on [Tuts+](http://bit.ly/1Eluwdn) to make your application ready to publish**
 

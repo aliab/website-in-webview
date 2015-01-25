@@ -30,7 +30,7 @@ import android.widget.RelativeLayout;
 public class MainActivity extends Activity {
 
 	// set your custom url here
-	String url = "http://jameehonar.ir/";
+	String url = "http://www.YOURCUSTOMURL.com/";
 	
 	// show progress bar on splash screen
 	Boolean showProgressOnSplashScreen = true;
