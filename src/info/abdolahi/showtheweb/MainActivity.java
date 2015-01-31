@@ -1,5 +1,19 @@
 package info.abdolahi.showtheweb;
 
+/*
+ * Copyright (C) 2015 Ali Abdolahi
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file 
+ * except in compliance with the License. You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the 
+ * License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, 
+ * either express or implied. See the License for the specific language governing permissions and 
+ * limitations under the License.
+ */
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -8,7 +22,6 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
-import android.view.animation.TranslateAnimation;
 import android.webkit.WebSettings;
 import android.webkit.WebSettings.RenderPriority;
 import android.webkit.WebView;
@@ -19,7 +32,7 @@ import android.widget.RelativeLayout;
 public class MainActivity extends Activity {
 
 	// set your custom url here
-	String url = "http://www.YOURCUSTOMURL.ir";
+	String url = "http://www.YOURCUSTOMURL.com";
 
 	// if you want to show progress bar on splash screen
 	Boolean showProgressOnSplashScreen = true;
@@ -78,7 +91,9 @@ public class MainActivity extends Activity {
 		mWebView.getSettings().setAppCacheEnabled(true);
 		mWebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
 		mWebView.getSettings().setDatabaseEnabled(true);
-		mWebView.getSettings().setDatabasePath(this.getFilesDir().getPath() + this.getPackageName() + "/databases/");
+		mWebView.getSettings().setDatabasePath(
+				this.getFilesDir().getPath() + this.getPackageName()
+						+ "/databases/");
 
 		// this force use chromeWebClient
 		webSettings.setSupportMultipleWindows(true);
@@ -113,8 +128,8 @@ public class MainActivity extends Activity {
 
 				// check if splash is still there, get it away!
 				if (splash.getVisibility() == View.VISIBLE)
-					slideToTop(splash);
-				// splash.setVisibility(View.GONE);
+					splash.setVisibility(View.GONE);
+				// slideToBottom(splash);
 
 			}
 
@@ -127,14 +142,14 @@ public class MainActivity extends Activity {
 	 * 
 	 * @param view
 	 */
-	void slideToTop(View view) {
-		TranslateAnimation animate = new TranslateAnimation(0, 0, 0,
-				view.getHeight());
-		animate.setDuration(2000);
-		animate.setFillAfter(true);
-		view.startAnimation(animate);
-		view.setVisibility(View.GONE);
-	}
+	// void slideToBottom(View view) {
+	// TranslateAnimation animate = new TranslateAnimation(0, 0, 0,
+	// view.getHeight());
+	// animate.setDuration(2000);
+	// animate.setFillAfter(true);
+	// view.startAnimation(animate);
+	// view.setVisibility(View.GONE);
+	// }
 
 	@Override
 	public boolean onKeyDown(final int keyCode, final KeyEvent event) {
