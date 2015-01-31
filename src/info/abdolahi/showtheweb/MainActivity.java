@@ -17,7 +17,6 @@ package info.abdolahi.showtheweb;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.Bitmap;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -38,7 +37,7 @@ public class MainActivity extends Activity {
 	Boolean showProgressOnSplashScreen = true;
 
 	WebView mWebView;
-	ProgressBar prgs, splashPrgs;
+	ProgressBar prgs;
 	RelativeLayout splash, main_layout;
 
 	@SuppressWarnings("deprecation")
@@ -59,27 +58,25 @@ public class MainActivity extends Activity {
 		main_layout = (RelativeLayout) findViewById(R.id.main_layout);
 
 		// splash screen View
-		splashPrgs = (ProgressBar) findViewById(R.id.progressBarSplash);
 		if (!showProgressOnSplashScreen)
-			splashPrgs.setVisibility(View.GONE);
+			((ProgressBar) findViewById(R.id.progressBarSplash)).setVisibility(View.GONE);
 		splash = (RelativeLayout) findViewById(R.id.splash);
 
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-
-			// get status bar height to push webview below that
-			int result = 0;
-			int resourceId = getResources().getIdentifier("status_bar_height",
-					"dimen", "android");
-			if (resourceId > 0) {
-				result = getResources().getDimensionPixelSize(resourceId);
-			}
-
-			// set top padding to status bar
-			main_layout.setPadding(0, result, 0, 0);
-		}
-
+//		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//
+//			// get status bar height to push webview below that
+//			int result = 0;
+//			int resourceId = getResources().getIdentifier("status_bar_height",
+//					"dimen", "android");
+//			if (resourceId > 0) {
+//				result = getResources().getDimensionPixelSize(resourceId);
+//			}
+//
+//			// set top padding to status bar
+//			main_layout.setPadding(0, result, 0, 0);
+//		}
+		
 		mWebView.loadUrl(url);
-		WebSettings webSettings = mWebView.getSettings();
 
 		// control javaScript and add html5 features
 		mWebView.setFocusable(true);
@@ -96,7 +93,7 @@ public class MainActivity extends Activity {
 						+ "/databases/");
 
 		// this force use chromeWebClient
-		webSettings.setSupportMultipleWindows(true);
+		mWebView.getSettings().setSupportMultipleWindows(true);
 
 		mWebView.setWebViewClient(new WebViewClient() {
 
