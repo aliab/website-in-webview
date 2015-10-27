@@ -4,7 +4,7 @@ website in webview or website to android is an Android project that load website
 
 #Screenshot
 
-![Preview](https://dl.dropboxusercontent.com/u/34047574/webviewapp.jpg)
+![Preview](https://dl.dropboxusercontent.com/u/34047574/github/webview/webviewapp.jpg)
 
 #Quick Start
 
