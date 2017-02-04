@@ -1,3 +1,6 @@
+# PLEASE NOTE, THIS PROJECT IS NO LONGER BEING MAINTAINED
+
+* * *
 #website in webview
 
 website in webview or website to android is an Android project that load website in a full screen webview with loading screen. it helps you convert you responsive website, into a simple Android application.
